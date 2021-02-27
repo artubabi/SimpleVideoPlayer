@@ -19,7 +19,6 @@ C:\Github\SimpleVideoPlayer\MediaPlayer\bin\Debug\Contents\MountainsPixabayLicen
 C:\Github\SimpleVideoPlayer\MediaPlayer\bin\Debug\MediaPlayer.exe.config
 C:\Github\SimpleVideoPlayer\MediaPlayer\bin\Debug\MediaPlayer.exe
 C:\Github\SimpleVideoPlayer\MediaPlayer\bin\Debug\MediaPlayer.pdb
-C:\Github\SimpleVideoPlayer\MediaPlayer\obj\Debug\MediaPlayer.csprojAssemblyReference.cache
 C:\Github\SimpleVideoPlayer\MediaPlayer\obj\Debug\MainWindow.g.cs
 C:\Github\SimpleVideoPlayer\MediaPlayer\obj\Debug\App.g.cs
 C:\Github\SimpleVideoPlayer\MediaPlayer\obj\Debug\MediaPlayer_Content.g.cs
@@ -33,3 +32,4 @@ C:\Github\SimpleVideoPlayer\MediaPlayer\obj\Debug\MediaPlayer.csproj.GenerateRes
 C:\Github\SimpleVideoPlayer\MediaPlayer\obj\Debug\MediaPlayer.csproj.CoreCompileInputs.cache
 C:\Github\SimpleVideoPlayer\MediaPlayer\obj\Debug\MediaPlayer.exe
 C:\Github\SimpleVideoPlayer\MediaPlayer\obj\Debug\MediaPlayer.pdb
+C:\Github\SimpleVideoPlayer\MediaPlayer\obj\Debug\MediaPlayer.csprojAssemblyReference.cache

@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using System.Windows.Forms;
 
 namespace MediaPlayer
 {
@@ -56,7 +57,7 @@ namespace MediaPlayer
 
         private void MediaPlayerMediaFailed(object sender, ExceptionRoutedEventArgs e)
         {
-            MessageBox.Show(e.ErrorException.Message);
+            System.Windows.MessageBox.Show(e.ErrorException.Message);
         }
 
         private void WindowLoaded(object sender, RoutedEventArgs e)
@@ -101,6 +102,37 @@ namespace MediaPlayer
             MediaPlayer.Play();
             if (dispatcherTimer != null)
                 dispatcherTimer.Start();
+        }
+
+        private void menuOpenClick(object sender, RoutedEventArgs e)
+        {
+            MediaPlayer.Pause();
+            if (dispatcherTimer != null)
+                dispatcherTimer.Stop();
+
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.InitialDirectory = "c:\\";
+                openFileDialog.Filter = "mp4 files (*.mp4)|*.mp4|All files (*.*)|*.*";
+                openFileDialog.FilterIndex = 1;
+                openFileDialog.RestoreDirectory = true;
+
+                if (openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    System.Uri filePath = new System.Uri(openFileDialog.FileName);
+                    MediaPlayer.Source = filePath;
+
+                    // Get movie title
+                    string[] splitedFilePath = filePath.ToString().Split('/');
+                    MovieTitle.Content = splitedFilePath[splitedFilePath.Length - 1];
+                }
+            }
+        }
+
+
+        private void menuExitClick(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
